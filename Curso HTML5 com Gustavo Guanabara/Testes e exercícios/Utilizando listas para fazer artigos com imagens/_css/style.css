@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aqua;
+}
+
+.imagens li {
+    list-style: none;
+}
+
+.imagens img {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+.imagens {
+    display: flex;
+}
+
+.imagens p {
+    width: 200px;
+    height: 200px;
+    text-align: justify;
+    padding: 10px;
+}

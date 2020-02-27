@@ -1,0 +1,108 @@
+ul#album-fotos {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden; /* Tira as barras de rolagem */
+    list-style: none;
+}
+
+ul#album-fotos li {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 5px solid white;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    -webkit-transition: all .4s ease-in;
+}
+
+ul#album-fotos li#foto-01 {
+    background: url('../_images/galeria-01.jpg') no-repeat;
+    background-position: 50% 50%; /* O background está mostrando o canto superior esquerdo da imagem. Logo, se você quer mostrar o meio, desça 50% na vertical e 50% na horizontal. */
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+ul#album-fotos li#foto-01:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto-02 {
+    background: url('../_images/galeria-02.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+ul#album-fotos li#foto-02:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto-03 {
+    background: url('../_images/galeria-03.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+ul#album-fotos li#foto-03:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto-04 {
+    background: url('../_images/galeria-04.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+ul#album-fotos li#foto-04:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto-05 {
+    background: url('../_images/galeria-05.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+ul#album-fotos li#foto-05:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto-06 {
+    background: url('../_images/galeria-06.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+ul#album-fotos li#foto-06:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li span {
+    opacity: 0;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px black;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 9pt;
+    line-height: 370px;
+    padding: 7px;
+}
+
+ul#album-fotos li:hover span { /* Se você colocar o hover no span, a legenda só aparecerá quando o mouse passar por cima do span. Se você quer que a legenda apareça quando você passar por cima da imagem, coloque no li. */
+    opacity: 1;
+}
+
+ul#album-fotos li:hover {
+    -webkit-transform: scale(1.5); /* Muda a escala do objeto */
+}

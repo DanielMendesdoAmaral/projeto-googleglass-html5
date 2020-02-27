@@ -1,0 +1,303 @@
+/* FONTES */
+
+@font-face {  /* Você importa uma fonte específica. O usuário não precisará ter ela instalada em seu pc, pois o próprio navegador fará isso por ela. Há outro método. Você copia o link do google fonts (está no html, perto do link style/css). Ele será colocado no h2 do cabeçalho. Vai lá para ver o que deve ser colocado em font-family. */
+    font-family: "fonte-logo"; /* Nome da fonte que você dá. Você tem que colocá-lo na font-family do texto onde você quer essa fonte. */
+    src: url("../_fonts/bubblegum-sans-regular.ttf");
+}
+
+/* CONFIGURAÇÕES GERAIS */
+
+* { /* Serve para zerar as margens e os paddings padrôes do navegador */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar-track { /* Cor de fundo da scrollbar, por onde ela desliza */
+    background-color: #DDDDDD;
+}
+::-webkit-scrollbar { /* Tamanho da scrollbar */
+    width: 6px;
+}
+::-webkit-scrollbar-thumb { /* Cor da scrollbar */
+    background: #606060;
+}
+
+body {
+    background-color: #dddddd;
+    }
+}
+
+p {
+    text-align: justify; /* Deixa o parágrafo alinhadinho, em forma de quadrados. */
+    text-indent: 30px; /* Define uma indentação ao parágrafo. */
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* FORMATAÇÃO DA INTERFACE */
+
+div#interface {
+    width: 910px;
+    background-color: #ffffff;
+    margin: 0px auto 0px auto; /* Cima, direita, baixo, esquerda */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px; /* Para desgrudar o texto da margem */
+}
+
+/* FORMATAÇÃO DO CABEÇALHO */
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url(../_images/glass-logo-peq.jpg) no-repeat 11px 80px; /* Tive que voltar uma pasta. Como a imagem é muito pequena, ela se repetiu. Por isso o atributo no-repeat. */
+
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 953px;
+    top: 56px;
+}
+
+header#cabecalho h1 {
+    font-family: fonte-logo;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    margin-top: 5px;
+    margin-left: 20px;
+    
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+/* FORMATAÇÃO DA FIGURA glass-quadro-homem-mulher.jpg */
+
+figure.foto-legenda {
+    position: relative; /* Faz com que o box figure ocupe a posição relativa no site, isto é, sua posição real. */
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+    margin: auto;
+    width: 80%;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+figure.foto-legenda img { /* Este bloco irá aplicar os estilos apenas na tag figure, pertencentes a classe foto-legenda, e que for imagem. */
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0; /* A legenda é transparente. */
+    position: absolute; /* Ocupa uma posição absoluta, não relativa. */
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4); /* A legenda tem um fundo um pouco opaca, para um efeito bonito. */
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 20px; /* Item, o padding, a borda, e a margem*/
+    box-sizing: border-box; /* Cria um limite para os itens não ultrapassarem o box. */
+}
+
+figure.foto-legenda:hover figcaption { /* :hover quer dizer que o estilo está definido, mas não está ativo. É utilizado para animações. */
+    opacity: 1; /* A legenda, naturalmente, é transparente, mas ao passar o mouse por cima, ela deixa de ser. */
+    transition: opacity 1s; /* Define o tempo de duração da animação, para não ficar algo instantâneo. */
+}
+
+/* FORMATAÇÃO DO MENU */
+
+nav#menu {
+    display: block; /* Faz com que os elementos fiquem um debaixo do outro, em parágrafo. */
+}
+
+nav#menu ol {
+    list-style: none; /* Tira os estilos da lista */
+    text-transform: uppercase; /* Transforma o textos em maiúsculo. Jamais escreva textos em maiúsculos, pois o leitor de telas considerará como se fosse uma sigla, e lerá letra por letra. Por isso, sempre que quiser um texto em maiúsculo, escreva-o normalmente e aplique essa formatação. */
+    position: absolute;
+    top: 0px;
+    right: 240px;
+}
+
+nav#menu li {
+    display: inline-block; /* Faz com que os itens alinhem-se na horizontal. Igual o display flex, só que este é aplicado no pai e passa para os filhos. O inline block pode ser aplicado diretamente no item a ser alinhado. */
+    background-color: #dddddd;
+    padding: 8px;
+    margin-right: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+    transition: background-color 0.5s;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+nav#menu h1 {
+    display: none; /* Oculta o h1 */
+}
+
+nav#menu a {
+    color: #000000;
+    text-decoration: none; /* Tira a decoração padrão dos links */
+    font-weight: 500;
+}
+
+nav#menu a:hover {
+    color: #ffffff;
+    text-decoration: underline; /* Sublinha os textos */
+    font-weight: bold;
+}
+
+/* FORMATAÇÃO DO CONTEÚDO PRINCIPAL */
+
+section#corpo {
+    display: block;
+    width: 520px;
+    float: left; /* Ou, no bom e velho português, vai ficar no lado esquerdo. Só serve com display block. */
+    border-right: 1px solid #606060;
+    padding: 15px;
+}
+
+section#corpo p {
+    padding: 8px;
+}
+
+article#noticia-principal h2 {
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: fonte-logo, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20pt;
+    color: #606060;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: white;
+    margin-top: 0px;
+}
+
+header#cabecalho-artigo h3 {
+    font-size: 12px;
+    color: #606060;
+}
+
+.direita {
+    text-align: right;
+}
+
+table#tabela-spec {
+    border: 1px solid #606060;
+    border-spacing: 0px; /* Tira os espaços padrão das bordas. */
+    margin: auto;
+}
+
+table#tabela-spec td {
+    border: 1px solid #606060;
+    padding: 10px;
+}
+
+table#tabela-spec td.td-left {
+    text-align: right;
+    vertical-align: top; /* Alinhamento vertical ao topo */
+    color: #ffffff;
+    background-color: #606060;
+    font-weight: bold;
+}
+
+table#tabela-spec td.td-right {
+    background-color: #cccccc;
+    color: black;
+}
+
+table#tabela-spec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+    text-align: center;
+}
+
+table#tabela-spec span {
+    display: block;
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+/* FORMATAÇÃO DA LATERAL */
+
+aside#lateral {
+    display: block;
+    width: 330px;
+    float: right;
+    background-color: #dddddd;
+    padding: 12px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+aside#lateral h1 {
+    font-family: fonte-logo;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 12pt;
+    color: white;
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+aside#lateral p {
+    padding: 8px;
+}
+
+/* FORMATAÇÃO DO RODAPÉ */
+
+footer#rodape {
+    clear: both; /* Faz ficar fora da divisão, e separado de elementos flutuantes. */
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}
+
+video#filme1 {
+    margin-left: 50px;
+}
+
+video#filme2 {
+    width: 320px;
+    display: block;
+    margin: auto;
+}

@@ -1,0 +1,57 @@
+form {
+    width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13pt;
+    font-weight: normal;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+input:hover, textarea:hover {
+    background-color: #eeeeee;
+}
+
+legend {
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+fieldset {
+    border-color: #cecece;
+    margin: 20px;
+}
+
+fieldset#sexo {
+    width: 150px;
+}
+
+fieldset#usuario {
+    background: url(../_images/icone-contato.png) no-repeat 95% 95%;
+}
+
+fieldset#endereco {
+    background: url(../_images/icone-endereco.png) no-repeat 95% 95%;
+}
+
+fieldset#mensagem {
+    background: url(../_images/icone-mensagem.png) no-repeat 95% 95%;
+}
+
+fieldset#pedido {
+    background: url(../_images/icone-pagamento.png) no-repeat 95% 95%;
+}
+
+p {
+    padding: 5px;
+    color: black;
+    font-weight: 500;
+}
+
+textarea {
+    width: 480px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste JS 3</title>
+    <script>
+        var quebrada = false; // A variável não está quebrada no início
+        function mudaLampada(tipo) {
+            if (tipo == 1) { 
+                arquivo = "_images/lampada-acesa.jpg";
+            }
+            if (tipo == 2) {
+                arquivo = "_images/lampada-apagada.jpg";
+            }
+            if (tipo == 3) {
+                arquivo = "_images/lampada-quebrada.jpg";
+            }
+            if (!quebrada) { // Se quebrada for falso, ele printa
+                document.getElementById("lampada").src = arquivo; 
+                if (tipo == 3) { // Se o tipo for três, fica quebrada, e ele só printa se quebrada for falsa. Ou seja, a partir do momento em que quebrada vira verdadeiro, ele fica estagnado na lâmpada quebrada.
+                    quebrada = true;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="_images/lampada-apagada.jpg" id="lampada" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)">
+</body>
+</html>
